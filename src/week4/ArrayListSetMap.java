@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.Set;
 
 public class ArrayListSetMap {
@@ -13,6 +14,8 @@ public class ArrayListSetMap {
 		//1. An instance of an ArrayList of String called employeeNames
 		List<String> employeeNames = new ArrayList<String>();
 		
+		//List<String> employeeNames = Arrays.asList("Sandy", "Randy", "Hobbit", "Sam", "Pam"); //another way to declare
+				
 		//2. An instance of a HashSet of Integer called ids
 		Set<Integer> ids = new HashSet<Integer>();
 		
@@ -25,16 +28,23 @@ public class ArrayListSetMap {
 		//10. Another StringBuilder called namesBuilder
 		StringBuilder namesBuilder = new StringBuilder();
 		
+		// A random number generator  
+		Random rand = new Random();
+		
+		//A variable to keep the upper bound of the random number to be 100
+		int upperBound = 100;	
+		
 		//4. Add at least five entries to the employeeNames
 		employeeNames.add("Sandy");
 		employeeNames.add("Randy");
 		employeeNames.add("Hobbit");
 		employeeNames.add("Sam");
-		employeeNames.add("Pam");
+		employeeNames.add("Pam"); 
 		
 		//4. Add the same number of entries to the ids as the employeeNames
-		for(int i = 1; i <= employeeNames.size(); i++) {
-			ids.add(i);
+		// Use the upperBound variable to limit the random numbers to be under 100
+		for(int i = 0; i < employeeNames.size(); i++) {
+			ids.add(rand.nextInt(upperBound));
 		}
 		
 		/* 5. Iterate over ids using an enhanced for loop. Inside the enhanced for loop 
@@ -45,6 +55,7 @@ public class ArrayListSetMap {
 			employeeMap.put(id, employeeNames.get(i));
 			i++;
 		}
+		
 		/*
 		 * 6. Use another enhanced for loop to iterate over the employeeMap.keySet(), and use 
 		 * the key for each current iteration to print to the console both the current key and 
