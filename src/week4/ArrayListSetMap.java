@@ -80,7 +80,7 @@ public class ArrayListSetMap {
 		}
 				
 		//9. Print the result of idsBuilder.toString() to the console.
-		System.out.println("\n9) The idsBuilder is: " + idsBuilder);
+		System.out.println("\n9) The idsBuilder is: " + idsBuilder.toString());
 		
 		/*11. Iterate over the employeeNames ArrayList and append each name, 
 		 * followed by a space “ “ to the namesBuilder.		 */
@@ -95,7 +95,7 @@ public class ArrayListSetMap {
 		}
 		
 		//12. Print the result of namesBuilder.toString() to the console.
-		System.out.println("\n12) The namesBuilder is: " + namesBuilder);
+		System.out.println("\n12) The namesBuilder is: " + namesBuilder.toString());
 			
 	}// main()
 
